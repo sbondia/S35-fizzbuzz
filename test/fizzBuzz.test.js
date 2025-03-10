@@ -1,9 +1,9 @@
 const { expect } = require("@jest/globals");
-import { FizzBuzz } from "../src/FizzBuzz"; // forma de ES6. Desde la clase se debe exportar asi: export {FizzBuzz};
+import { FizzBuzz } from "../src/FizzBuzz";
 
 /**
- * ACCEPTANCE CRITERIA  ----> Historias de usuario
-     * Feature para saber cuándo un número es primo de 3 y de 5
+ * CASOS DE PRUEBA
+     * Feature validación de FizzBuzz
      *  1.Cuando el usuario digite un número divisible por 3, devuelve Fizz,
      *  2.Cuando el usuario digite un número divisible por 5, devuelve Buzz,
      *  3.Cuando el usuario digite un número divisible por 3 y 5, devuelve FizzBuzz,
@@ -15,14 +15,15 @@ describe('FizzBuzz test for multiples of 3 and 5', () => {
         test('test_returns_Fizz_when_multiple_3', () => {
             //Gherking test
             /**
-             * GIVEN / DADO un número
-             * WHEN / CUANDO sea múltiplo de 3
-             * THEN / ENTONCES retorno Fizz como respuesta
+             * Scenario: Número divisible por 3
+             * Given un número 9
+             * When el número es procesado
+             * Then se muestra "Fizz"
              */
 
             // Arrange: Preparar el escenario
                 //entrada
-            let valor_entrada = 3;
+            let valor_entrada = 9;
                 //salida
             let respuesta_esperada = "Fizz";
                 //proceso - caja negra
@@ -34,5 +35,21 @@ describe('FizzBuzz test for multiples of 3 and 5', () => {
             // Assert: Comprobar el escenario
             expect(resultado).toBe(respuesta_esperada);
         });
+        test('test_returns_Buzz_when_multiple_5', () => {
+            //Gherking test
+            /**
+             * Scenario: Número divisible por 5
+             * Given un número 10
+             * When el número es procesado
+             * Then se muestra "Buzz"
+             */
+
+            // Arrange
+
+            // Act
+    
+            // Assert
+    
+        })
     }
 )

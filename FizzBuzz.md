@@ -22,6 +22,34 @@ Este ejercicio tiene como objetivo evaluar tus conocimientos sobre JavaScript, m
 * Se almacena cada número ingresado junto con su resultado en un objeto.
 * Se muestra en pantalla un historial con los valores ingresados y sus resultados.
 
+## Casos de prueba (formato Gherking)
+
+### Feature: Validación de FizzBuzz
+#### Scenario: Número divisible por 3
+    Given un número 9
+    When el número es procesado
+    Then se muestra "Fizz"
+#### Scenario: Número divisible por 5
+    Given un número 10
+    When el número es procesado
+    Then se muestra "Buzz"
+#### Scenario: Número divisible por 3 y 5
+    Given un número 15
+    When el número es procesado
+    Then se muestra "FizzBuzz"
+#### Scenario: Número no divisible por 3 ni 5
+    Given un número 7
+    When el número es procesado
+    Then se muestra "7"
+#### Scenario: Entrada no numérica
+    Given una entrada "Hola"
+    When el usuario intenta procesar la entrada
+    Then se muestra un mensaje de error
+#### Scenario: Historial de entradas
+    Given un número 9 y un número 10
+    When el usuario los ingresa secuencialmente
+    Then el historial muestra "9: Fizz" y "10: Buzz"
+
 ### Pistas
 * Usa document.getElementById() o querySelector() para obtener los elementos del DOM.
 * Usa parseInt() para convertir la entrada del usuario en un número.
