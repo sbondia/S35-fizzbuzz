@@ -23,14 +23,16 @@ Este ejercicio tiene como objetivo evaluar tus conocimientos sobre JavaScript, m
 * *Técnico*: Manejar errores usando `<span>try...catch</span>`.
 * *Técnico*: implementar una estructura de retorno con el siguiente formato:
 
+  ```javascript
   {
   	status: "", // Código indicando éxito o error
-  	message: "",
+  	message: "", // Mensaje
   	data: {
   		number: 0, // Número evaluado
   		result: "" // Resultado esperado
   	}
   }
+  ```
 
 ## Casos de prueba (formato Gherking)
 
