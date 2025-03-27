@@ -74,14 +74,20 @@ Este ejercicio tiene como objetivo evaluar tus conocimientos sobre JavaScript, m
     When el usuario los ingresa secuencialmente
     Then el historial muestra "9: Fizz" y "10: Buzz"
 
-### Pistas
+## Estructura de archivos
 
-* Usa document.getElementById() o querySelector() para obtener los elementos del DOM.
-* Usa parseInt() para convertir la entrada del usuario en un número.
-* Usa isNaN() para validar si la entrada es un número válido.
-* Usa try...catch para manejar errores y mostrar mensajes adecuados.
-* Usa innerText o textContent para mostrar el resultado en la página.
-* Usa un array de objetos para almacenar los números ingresados y sus resultados.
-* Usa forEach() o map() para iterar sobre el array y mostrar el historial en la interfaz.
+// fizzbuzz-project-structure
+│── index.html          # Estructura HTML
+│── /js
+│   ├── dom.js          # Manipulación del DOM
+│   ├── fizzbuzz.js     # Lógica de FizzBuzz
+│   ├── events.js       # Manejo de eventos
+│── /css
+│   ├── styles.css      # Estilos opcionales
+
+│── /test
+│   ├── fizzBuzz.test.js    # Tests de la lógica
+│   ├── dom.test.js      # Tests de la interfáz
+│   ├── events.test.js      # Tests de las interacciones
 
 ¡Buena suerte! 🚀
