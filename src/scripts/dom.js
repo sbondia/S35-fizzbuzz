@@ -8,5 +8,5 @@ function domInput(){
 }
 function domOutput(obj){
     let div = document.querySelector('#salida')
-    div.innerHTML += obj+"<br>"
+    div.innerHTML += obj.toString()+"<br>"
 }
