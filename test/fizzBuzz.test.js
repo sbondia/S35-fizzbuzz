@@ -127,7 +127,7 @@ describe('FizzBuzz test for multiples of 3 and 5', () => {
             expect(resultado.status).toBe("NOK"); 
         })
 
-        test('returns number when is not multiple of 3 and 5', () => {
+        test('returns past calls', () => {
 
             // Arrange
             let valor_entrada_1 = 9;
