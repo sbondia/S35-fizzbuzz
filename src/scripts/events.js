@@ -1,6 +1,7 @@
 /**
  * Responsabilidad: gestionar los eventos
  * */ 
+/*
 const btn = document.getElementById("btn")
 console.log(btn)
 btn.addEventListener("click", (click) => {
@@ -8,3 +9,4 @@ btn.addEventListener("click", (click) => {
 	click.preventDefault();
 	fizzBuzz(domInput())
 })
+*/

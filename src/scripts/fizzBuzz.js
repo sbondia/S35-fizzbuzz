@@ -10,14 +10,37 @@
             }
     }
  * */ 
-function fizzBuzz(numInput){
+const resultObj = {
+  	status: "", 
+  	message: "", 
+  	data: {
+  		number: 0, 
+  		result: "" 
+  	}
+}
+
+function fizzBuzzMain(){
+    let input = domInput()
+    resultObj.status = input ? "OK" : "Error"
+    if(resultObj.status=="OK"){
+        resultObj.data.number = input
+        resultObj.data.result = fizzBuzzCalc(input)
+    }
+    console.log(resultObj, resultObj.data)
+}
+
+function fizzBuzzCalc(num){
     const numA = 3
     const numB = 5
     let result = 0
-    if (numInput%numA==0) {result += 1}
-    if (numInput%numB==0) {result += 2}
-
-
-    //return result
-    domOutput(result)
+    let aux = ''
+    if (num%numA==0) {result += 1}
+    if (num%numB==0) {result += 2}
+    switch(result){
+        case 0: aux = "igual"; break;
+        case 1: aux = "fizz"; break;
+        case 2: aux = "buzz"; break;
+        case 3: aux = "fizzbuzz"; break;
+    }
+    return aux
 }
