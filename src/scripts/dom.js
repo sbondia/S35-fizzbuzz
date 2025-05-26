@@ -5,7 +5,6 @@ const pastFB = []
 function domInput(){
     let num = parseInt(document.querySelector('#num').value)
     pastFB.push(fizzBuzzMain(num))
-    //console.log(pastFB)
     domOutput()
 }
 function domOutput(){

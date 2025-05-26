@@ -86,7 +86,6 @@ describe('FizzBuzz test for multiples of 3 and 5', () => {
             expect(resultado).toEqual(respuesta_esperada); // valida estructura de respuesta
             expect(resultado.data.output).toBe("FizzBuzz"); // valida que el valor output corresponda al expect
         })
-        
 
         test('returns number when is not multiple of 3 and 5', () => {
             //Gherking test
@@ -96,7 +95,7 @@ describe('FizzBuzz test for multiples of 3 and 5', () => {
              * When el número es procesado
              * Then se muestra el número ingresado
              */
-            
+
             // Arrange
             let valor_entrada = 8;
             let respuesta_esperada = {
@@ -114,6 +113,35 @@ describe('FizzBuzz test for multiples of 3 and 5', () => {
             expect(typeof resultado.data.input).toBe("number"); // valida que input sea un número
             expect(resultado).toEqual(respuesta_esperada); // valida estructura de respuesta
             expect(resultado.data.output).toBe("Puff"); // valida que el valor output corresponda al expect
+        })
+
+        test('returns "NOK" status when input is a string', () => {
+            
+            // Arrange
+            let valor_entrada = 'Hola';
+
+            // Act
+            let resultado = fizzBuzz(valor_entrada);
+
+            // Assert
+            expect(resultado.status).toBe("NOK"); 
+        })
+
+        test('returns number when is not multiple of 3 and 5', () => {
+
+            // Arrange
+            let valor_entrada_1 = 9;
+            let valor_entrada_2 = 10;
+            let output_1 = "Fizz"
+            let output_2 = "Buzz"
+
+            // Act
+            fizzBuzz(valor_entrada_1);
+            fizzBuzz(valor_entrada_2);
+
+            // Assert
+            expect(pastFB[0].data.output).toBe(output_1); 
+            expect(pastFB[1].data.output).toBe(output_2);
         })
     }
 )

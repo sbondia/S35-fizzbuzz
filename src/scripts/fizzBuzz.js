@@ -20,13 +20,11 @@ function fizzBuzzMain(input){
             result: "" 
         }
     }
-    //console.log(input)
     resultObj.status = input ? "OK" : "NOK"; resultObj.message = `Introduce un valor correcto.`;
     if(resultObj.status=="OK"){
         resultObj.data.number = input
         fizzBuzzCalc(input, resultObj)
     }
-    //console.log(resultObj, resultObj.data)
     return resultObj
 }
 
